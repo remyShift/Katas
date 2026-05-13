@@ -1,7 +1,19 @@
 import { describe, expect, it } from 'vitest'
 import FizzBuzz from "./fizzBuzz";
 
+function generateSlug(string) {
+    return string
+      .trim()
+      .toLowerCase()
+      .replace(/\s+/g, '-')
+      .replace(/[/]/g, '-')
+      .replace(/[^a-z0-9-]/g, '');
+  }
+
+
 describe('FizzBuzz basics', () => {
+    console.log(generateSlug(" x Chako Lab Thermo Bottle & Strap"));
+
     it("should return a number if he is not multiple of 3 or/and 5", () => {
         const fizzBuzz = new FizzBuzz();
         const number = 1;
